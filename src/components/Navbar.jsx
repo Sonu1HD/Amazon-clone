@@ -16,7 +16,7 @@ const Navbar = ({ searchTerm, setSearchTerm }) => {
 
     const fetchResults = async () => {
       const res = await fetch(
-        `http://localhost:3000/api/products?keyword=${searchTerm}`
+        `https://amazon-clone-0qb5.onrender.com/api/products?keyword=${searchTerm}`
       );
       const data = await res.json();
       setResults(data);
