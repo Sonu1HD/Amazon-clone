@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/api/products";
+const API_URL = "https://amazon-clone-0qb5.onrender.com/api/products";
 
 export const getProducts = async () => {
   const response = await fetch(API_URL);
