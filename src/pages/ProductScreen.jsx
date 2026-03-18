@@ -10,7 +10,7 @@ const ProductScreen = () => {
 
   useEffect(() => {
     const fetchProduct = async () => {
-      const res = await fetch(`http://localhost:3000/api/products/${id}`);
+      const res = await fetch(`https://amazon-clone-0qb5.onrender.com/api/products/${id}`);
       const data = await res.json();
       setProduct(data);
       setLoading(false);
