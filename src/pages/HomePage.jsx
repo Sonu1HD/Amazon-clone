@@ -35,7 +35,7 @@ const HomePage = () => {
     );
 
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 px-2 sm:px-4">
 
             {/* FIRST 3 DEAL CARDS */}
             {gridSections.slice(0, 4).map(section => (
@@ -44,7 +44,7 @@ const HomePage = () => {
                     title={section.title}
                     footer={section.footer}
                 >
-                    <div className="grid grid-cols-2 gap-3">
+                    <div className="grid grid-cols-2 gap-2 sm:gap-3">
                         {section.products.map(product => (
                             <ProductMiniCard
                                 key={product._id}

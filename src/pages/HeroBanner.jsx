@@ -42,7 +42,7 @@ const HeroBanner = () => {
   };
 
   return (
-    <div className="relative w-full h-150 overflow-hidden">
+    <div className="relative w-full h-[250px] sm:h-[350px] md:h-[450px] overflow-hidden">
       {/* Slides */}
       {banners.map((banner, i) => (
         <div
@@ -60,7 +60,7 @@ const HeroBanner = () => {
           <div className="absolute inset-0 bg-linear-to-b from-black/40 to-transparent"></div>
 
           {/* Text Content */}
-          <div className="absolute left-20 top-1/3 text-white max-w-md animate-fadeIn">
+          <div className="absolute left-4 sm:left-10 top-1/3 text-white max-w-md animate-fadeIn">
             <p className="text-lg">{banner.title}</p>
             <h2 className="text-3xl font-bold mb-2">{banner.price}</h2>
 

@@ -28,7 +28,7 @@ const Navbar = ({ searchTerm, setSearchTerm }) => {
   }, [searchTerm]);
 
   return (
-    <nav className="bg-gray-900 text-white px-4 py-2 flex items-center text-sm justify-between sticky top-0 z-50">
+    <nav className="bg-gray-900 text-white px-2 py-2 flex flex-col md:flex-row md:items-center md:justify-between sticky top-0 z-50">
 
       {/* Logo */}
       <Link
@@ -37,7 +37,7 @@ const Navbar = ({ searchTerm, setSearchTerm }) => {
           setSearchTerm("");
           setShowResults(false);
         }}
-        className="flex items-center hover:border-2"
+        className="flex items-center justify-center hover:border-2"
       >
         <img
           src="https://www.pngmart.com/files/23/Amazon-White-Logo-PNG.png"
@@ -112,7 +112,7 @@ const Navbar = ({ searchTerm, setSearchTerm }) => {
       </div>
 
       {/* Right */}
-      <div className="flex items-center gap-6">
+      <div className="hidden md:flex items-center gap-6">
         <span className="flex items-center hover:border-2">
           <img
             src="https://cdn-icons-png.flaticon.com/512/206/206606.png"

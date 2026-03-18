@@ -27,24 +27,36 @@ const CategoryNav = () => {
 
   return (
     <div className="bg-[#232f3e] text-white">
-      <div className="flex gap-2 px-3 py-1 overflow-x-auto whitespace-nowrap scrollbar-hide ">
+      <div className="flex items-center gap-2 px-2 sm:px-4 py-2 overflow-x-auto whitespace-nowrap scrollbar-hide">
+
         {categories.map((category) => (
           <button
             key={category}
             onClick={() => handleClick(category)}
-            className={`text-sm px-2 py-1 hover:cursor-pointer border-b-2 transition ${
-              active === category
-                ? "border-white font-semibold"
-                : "border-transparent hover:border-white"
-            }`}
+            className={`text-xs sm:text-sm px-3 py-1 rounded-md transition whitespace-nowrap ${active === category
+                ? "bg-white text-black font-semibold"
+                : "hover:bg-white/20"
+              }`}
           >
             {category}
           </button>
         ))}
-        <button>
-            <a className="text-sm px-2 py-1 hover:cursor-pointer hover:border-b-2 transition" href="https://www.amazon.in/minitv?ref_=nav_avod_desktop_topnav">MX Player</a>
-        </button>
-        <img src="https://m.media-amazon.com/images/G/31/Events/img25/Nimesh/JAN26_PC_SWM_Starts_1X._CB772984366_.jpg" alt="" />
+
+        {/* MX Player link */}
+        <a
+          href="https://www.amazon.in/minitv?ref_=nav_avod_desktop_topnav"
+          className="text-xs sm:text-sm px-3 py-1 rounded-md hover:bg-white/20 whitespace-nowrap"
+        >
+          MX Player
+        </a>
+
+        {/* Banner image (hide on mobile) */}
+        <img
+          src="https://m.media-amazon.com/images/G/31/Events/img25/Nimesh/JAN26_PC_SWM_Starts_1X._CB772984366_.jpg"
+          alt=""
+          className="hidden md:block h-8 ml-auto object-contain"
+        />
+
       </div>
     </div>
   );
